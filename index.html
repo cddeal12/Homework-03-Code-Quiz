@@ -27,36 +27,47 @@
     <container class="container-sm">
       <container class="row">
         <article class="col-sm-4 m-auto">
+          <!-- Title which changes to reflect each question -->
+          <h1 class="header">Javascript Coding Quiz</h1>
 
-            <!-- Title which changes to reflect each question -->
-            <h1 class="header">Introduction Title</h1>
+          <!-- Body text which is set to display-none after the start screen to make space for the ul element -->
+          <p class="intro-text">
+            This multiple choice quiz will test your knowledge of javascript.
+            You'll have 100 seconds, but you'll lose 10 for every question you
+            get wrong. See how much extra time you can finish with! Press the
+            start button to begin.
+          </p>
+          <!-- Start Button -->
+          <button
+            type="button"
+            class="btn btn-primary mx-auto"
+            id="start-button"
+          >
+            Start
+          </button>
 
-            <!-- Body text which is set to display-none after the start screen to make space for the ul element -->
-            <p class="intro-text bg-dark text-light">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet,
-                adipisci nihil maxime qui inventore eaque sunt rerum tenetur tempore
-                nesciunt quos sed eum voluptas quidem quasi totam modi accusantium
-                corrupti?
-            </p>
-            <!-- Start Button -->
-            <button type="button" class="btn btn-primary mx-auto" id="start-button">Start</button>
+          <!-- ul element that lists answers for each question, including buttons -->
+          <ul class="d-none bg-dark text-light" id="answers-list">
+            <li class="my-3">
+              <button class="btn btn-primary" id="slot1"></button>
+            </li>
+            <li class="my-3">
+              <button class="btn btn-primary" id="slot2"></button>
+            </li>
+            <li class="my-3">
+              <button class="btn btn-primary" id="slot3"></button>
+            </li>
+            <li class="my-3">
+              <button class="btn btn-primary" id="slot4"></button>
+            </li>
+          </ul>
 
-            <!-- ul element that lists answers for each question, including buttons -->
-            <ul class="d-none bg-dark text-light" id="answers-list">
-                <li class="my-3">
-                    <button class="btn btn-primary" id="slot1"></button>
-                </li>
-                <li class="my-3">
-                    <button class="btn btn-primary" id="slot2"></button>
-                </li>
-                <li class="my-3">
-                    <button class="btn btn-primary" id="slot3"></button>
-                </li>
-                <li class="my-3">
-                    <button class="btn btn-primary" id="slot4"></button>
-                </li>
-            </ul>
+          <!-- Elements of the final page -->
 
+          <h1 class="final-header d-none">Quiz Over!</h1>
+          <p class="outro-text d-none">
+            Enter your initials below! You got a final score of
+          </p>
         </article>
       </container>
     </container>
