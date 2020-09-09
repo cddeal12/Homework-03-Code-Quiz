@@ -46,6 +46,7 @@ function runQuiz(i) {
     // Empties out the list element to reset from previous questions
     answersList = emptyAnswers;
 
+
     // Resets the question buttons to be incorrect, before one is assigned as correct
     slot1El.setAttribute("class", "btn btn-primary");
     slot2El.setAttribute("class", "btn btn-primary");
@@ -73,7 +74,7 @@ function runQuiz(i) {
     }
 
     // Checks to see when a button is clicked, subtracts time if the one clicked is not correct
-    answersList.addEventListener("click", function(event) {
+    answersList.addEventListener("click", function answerChecker(event) {
             console.log("you clicked the list")
             if (event.target.matches(".btn")) {
                 if (event.target.matches(".correct")) {
@@ -81,6 +82,7 @@ function runQuiz(i) {
                     if (i === questions.length -1) {
                         lastPage();
                     } else {
+                        answersList.removeEventListener("click", answerChecker);
                         runQuiz(i+1);
                     };
                 } else {
@@ -90,6 +92,7 @@ function runQuiz(i) {
                     if (i === questions.length - 1) {
                         lastPage();
                     } else {
+                        answersList.removeEventListener("click", answerChecker);
                         runQuiz(i+1)};
                 }
             }
