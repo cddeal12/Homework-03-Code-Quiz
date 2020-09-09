@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Code Quiz</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- Header row including high-score link and timer -->
+    <header class="container">
+      <div class="row">
+        <a class="col-6-sm mr-auto" id="highscore-link">View Highscores</a>
+        <h3 class="col-6-sm ml-auto" id="timer">Timer: N/A</h3>
+      </div>
+    </header>
+
+    <!-- Bootstrap structure for quiz content -->
+    <container class="container-sm">
+      <container class="row">
+        <article class="col-sm-4 m-auto">
+
+            <!-- Title which changes to reflect each question -->
+            <h1 class="header">Introduction Title</h1>
+
+            <!-- Body text which is set to display-none after the start screen to make space for the ul element -->
+            <p class="intro-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet,
+                adipisci nihil maxime qui inventore eaque sunt rerum tenetur tempore
+                nesciunt quos sed eum voluptas quidem quasi totam modi accusantium
+                corrupti?
+            </p>
+            <!-- Start Button -->
+            <button type="button" class="btn btn-primary mx-auto" id="start-button">Start</button>
+
+            <!-- ul element that lists answers for each question, including buttons -->
+            <ul class="d-none" id="answers-list"></ul>
+
+        </article>
+      </container>
+    </container>
+
+    <!-- Javascript to handle content changing -->
+    <script src="javascript.js"></script>
+  </body>
+</html>
