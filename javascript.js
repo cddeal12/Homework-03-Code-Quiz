@@ -27,6 +27,20 @@ var question5 = {questionHeader:"Question 5 head", answer1:"q5a1", answer2:"q5a2
 var questions = [question1, question2, question3, question4, question5];
 
 
+function startTimer() {
+    var timerInterval = setInterval(function() {
+        timeLeft--;
+        timerText.textContent = "Timer : " + timeLeft;
+      
+        if(timeLeft === 0) {
+        var finalTime = 0;
+        clearInterval(timerInterval);
+        lastPage(finalTime);
+        }
+      
+    }, 1000);
+    };
+
 
 //Runs through each question in the questions variable, handling them one by one with handleAnswer()
 function runQuiz(i) {
@@ -80,7 +94,8 @@ function runQuiz(i) {
                 if (event.target.matches(".correct")) {
                     console.log("answer chosen, correct!")
                     if (i === questions.length -1) {
-                        lastPage();
+                        var finalTime = timeLeft;
+                        lastPage(finalTime);
                     } else {
                         answersList.removeEventListener("click", answerChecker);
                         runQuiz(i+1);
@@ -90,7 +105,8 @@ function runQuiz(i) {
                     console.log(timeLeft);
                     console.log("answer chosen, wrong");
                     if (i === questions.length - 1) {
-                        lastPage();
+                        var finalTime = timeLeft;
+                        lastPage(finalTime);
                     } else {
                         answersList.removeEventListener("click", answerChecker);
                         runQuiz(i+1)};
@@ -100,16 +116,33 @@ function runQuiz(i) {
 };
 
 // Changes the page elements to display the final page
-function lastPage() {
+function lastPage(finalTime) {
     finalHeader.setAttribute("class", "final-header d-block");
     outroText.setAttribute("class", "outro-text d-block");
     answersList.setAttribute("class", "d-none");
     header.setAttribute("class", "d-none");
+    timerText.setAttribute("class", "d-none");
+    document.querySelector(".input-group").setAttribute("class", "d-block");
+
+    // displays and stores score
+    outroText.textContent = outroText.textContent + finalTime;
+    localStorage.setItem("score", finalTime);
+
+    //takes in a name input and saves it
+    document.querySelector(".submit-btn").addEventListener("click", function() {
+        if (document.getElementById("High-Score") === "") {
+            alert("Enter your name or initials");
+        } else {
+            localStorage.setItem("name", document.getElementById("High-Score").value);
+        }
+    });
+
 };
 
 
 
 // Runs the functions to handle the quiz when the start button is pressed
 startButton.addEventListener("click", function() {
+    startTimer();
     runQuiz(0);
 });

@@ -18,7 +18,7 @@
     <!-- Header row including high-score link and timer -->
     <header class="container">
       <div class="row">
-        <a class="col-6-sm mr-auto" id="highscore-link">View Highscores</a>
+        <a class="col-6-sm mr-auto" href="Highscores\highscore.html" id="highscore-link">View Highscores</a>
         <h3 class="col-6-sm ml-auto" id="timer">Timer: N/A</h3>
       </div>
     </header>
@@ -68,6 +68,11 @@
           <p class="outro-text d-none">
             Enter your initials below! You got a final score of
           </p>
+          <div class="input-group d-none">
+            <label for="High-Score">Name</label>
+            <input type="text" name="High-Score" id="High-Score"/>
+            <button class="btn btn-primary submit-btn">Submit</button>
+          </div>
         </article>
       </container>
     </container>
