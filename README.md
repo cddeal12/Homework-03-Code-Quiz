@@ -1,2 +1,5 @@
 # Homework-03-Code-Quiz
-A page that includes a series of coding quiz questions.
+This project is a site containing a quiz on javascript concepts. The purpose behind the activity was to practice DOM manipulation through javascript and create a functioning site with many different functions inside.
+
+# Method
+The psuedocode behind this project was to create empty objects in the html for items such as the list of potential answers, the questions themselves and the timer, and then to use javascript and DOM manipulation to change the contents and displays of each of those objects as appropriate with the page. This turned out to be very successful, and helped me meet my personal standard of making the entire project run on one page aside from the high-score display. I was satisfied with how this approach allowed me to manipulate the objects on screen but I do admit it was a much more difficult process than it might have been to create a unique page for each question, saving the relevant information between pages through local storage.
