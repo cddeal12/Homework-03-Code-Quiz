@@ -18,11 +18,11 @@ var slot4El = document.getElementById("slot4");
 
 // Declared object variables to store question data
 
-var question1 = {questionHeader:"Question 1 head", answer1:"q1a1", answer2:"q1a2", answer3:"q1a3", answer4:"q1a4", correctAns:2};
-var question2 = {questionHeader:"Question 2 head", answer1:"q2a1", answer2:"q2a2", answer3:"q2a3", answer4:"q2a4", correctAns:1};
-var question3 = {questionHeader:"Question 3 head", answer1:"q3a1", answer2:"q3a2", answer3:"q3a3", answer4:"q3a4", correctAns:4};
-var question4 = {questionHeader:"Question 4 head", answer1:"q4a1", answer2:"q4a2", answer3:"q4a3", answer4:"q4a4", correctAns:2};
-var question5 = {questionHeader:"Question 5 head", answer1:"q5a1", answer2:"q5a2", answer3:"q5a3", answer4:"q5a4", correctAns:3};
+var question1 = {questionHeader:"Which of these is not a variable type?", answer1:"boolean", answer2:"storage", answer3:"integer", answer4:"string", correctAns:2};
+var question2 = {questionHeader:"Which of these can be used to delay a function's execution by a set amount of time?", answer1:"setTimeout", answer2:"setAttribute", answer3:"else if loop", answer4:"getTime", correctAns:1};
+var question3 = {questionHeader:"The code a function will execute is contained in...", answer1:"parentheses", answer2:"greater-than and less-than", answer3:"square brackets", answer4:"curly brackets", correctAns:4};
+var question4 = {questionHeader:"Objects can NOT store which of the following?", answer1:"arrays", answer2:"variables", answer3:"other objects", answer4:"none of the above", correctAns:4};
+var question5 = {questionHeader:"The link to a javascript file is usually located where in the html document?", answer1:"at the top of the body", answer2:"at the top of the head", answer3:"at the bottom of the body", answer4:"outside both the body and head", correctAns:3};
 
 var questions = [question1, question2, question3, question4, question5];
 
