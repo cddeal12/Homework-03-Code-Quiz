@@ -101,7 +101,7 @@ function runQuiz(i) {
                         runQuiz(i+1);
                     };
                 } else {
-                    timeLeft = timeLeft - 10;
+                    timeLeft = timeLeft - 20;
                     console.log(timeLeft);
                     console.log("answer chosen, wrong");
                     if (i === questions.length - 1) {
@@ -127,6 +127,7 @@ function lastPage(finalTime) {
     // displays and stores score
     outroText.textContent = outroText.textContent + finalTime;
     localStorage.setItem("score", finalTime);
+    console.log("time recorded")
 
     //takes in a name input and saves it
     document.querySelector(".submit-btn").addEventListener("click", function() {
@@ -134,6 +135,8 @@ function lastPage(finalTime) {
             alert("Enter your name or initials");
         } else {
             localStorage.setItem("name", document.getElementById("High-Score").value);
+            document.getElementById("High-Score").value = "";
+            console.log("Name recorded")
         }
     });
 

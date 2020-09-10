@@ -1,8 +1,8 @@
-var name = document.querySelector(".card-title")
+var nameText = document.querySelector(".card-title")
 var score = document.querySelector(".card-text")
 
 function setScore() {
-    name.textContent = localStorage.getItem("name");
+    nameText.textContent = localStorage.getItem("name");
     score.textContent = localStorage.getItem("score");
 };
 
